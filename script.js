@@ -35,18 +35,6 @@ function selectWinner(element, matchCode) {
 
 function updateBracket() {
     const updates = {
-        'R16-1': 'Winner W1',
-        'R16-2': null,
-        'R16-3': null,
-        'R16-4': null,
-        'R16-5': null,
-        'R16-6': null,
-        'R16-7': null,
-        'R16-8': null,
-        'QF1': ['Winner R16-1', 'Winner R16-2'],
-        'QF2': ['Winner R16-3', 'Winner R16-4'],
-        'QF3': ['Winner R16-5', 'Winner R16-6'],
-        'QF4': ['Winner R16-7', 'Winner R16-8'],
         'SF1': ['Winner QF1', 'Winner QF2'],
         'SF2': ['Winner QF3', 'Winner QF4'],
         'FINAL': ['Winner SF1', 'Winner SF2']
@@ -57,31 +45,17 @@ function updateBracket() {
         if (!code || !updates[code]) return;
 
         const placeholders = box.querySelectorAll('.player-name.placeholder');
-        if (Array.isArray(updates[code])) {
-            placeholders.forEach((ph, i) => {
-                const sourceCode = updates[code][i];
-                if (winners[sourceCode]) {
-                    ph.textContent = winners[sourceCode];
-                    ph.classList.remove('placeholder');
-                    ph.style.color = '#94a3b8';
-                } else {
-                    ph.textContent = sourceCode;
-                    ph.classList.add('placeholder');
-                }
-            });
-        } else if (updates[code] && typeof updates[code] === 'string') {
-            const ph = box.querySelector('.player-name.placeholder');
-            if (ph) {
-                if (winners[updates[code]]) {
-                    ph.textContent = winners[updates[code]];
-                    ph.classList.remove('placeholder');
-                    ph.style.color = '#94a3b8';
-                } else {
-                    ph.textContent = updates[code];
-                    ph.classList.add('placeholder');
-                }
+        placeholders.forEach((ph, i) => {
+            const sourceCode = updates[code][i];
+            if (winners[sourceCode]) {
+                ph.textContent = winners[sourceCode];
+                ph.classList.remove('placeholder');
+                ph.style.color = '#94a3b8';
+            } else {
+                ph.textContent = sourceCode;
+                ph.classList.add('placeholder');
             }
-        }
+        });
     });
 
     if (winners['FINAL']) {
@@ -96,19 +70,10 @@ function updateBracket() {
 
 // Connector drawing
 const connections = [
-    { from: 'W1', to: 'R16-1' },
-    { from: 'R16-1', to: 'QF1' },
-    { from: 'R16-2', to: 'QF1' },
-    { from: 'R16-3', to: 'QF2' },
-    { from: 'R16-4', to: 'QF2' },
     { from: 'QF1', to: 'SF1' },
     { from: 'QF2', to: 'SF1' },
     { from: 'SF1', to: 'FINAL' },
     { from: 'SF2', to: 'FINAL' },
-    { from: 'R16-5', to: 'QF3' },
-    { from: 'R16-6', to: 'QF3' },
-    { from: 'R16-7', to: 'QF4' },
-    { from: 'R16-8', to: 'QF4' },
     { from: 'QF3', to: 'SF2' },
     { from: 'QF4', to: 'SF2' }
 ];
@@ -152,7 +117,7 @@ function drawConnectors() {
         // Glow layer (wide, blurry)
         const glowPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         glowPath.setAttribute('d', `M ${x1},${y1} L ${midX},${y1} L ${midX},${y4} L ${x4},${y4}`);
-        glowPath.setAttribute('stroke', 'rgba(139, 92, 246, 0.35)');
+        glowPath.setAttribute('stroke', 'rgba(252, 194, 27, 0.35)');
         glowPath.setAttribute('stroke-width', '8');
         glowPath.setAttribute('fill', 'none');
         glowPath.setAttribute('stroke-linejoin', 'round');
@@ -163,7 +128,7 @@ function drawConnectors() {
         // Secondary glow layer (blue)
         const blueGlow = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         blueGlow.setAttribute('d', `M ${x1},${y1} L ${midX},${y1} L ${midX},${y4} L ${x4},${y4}`);
-        blueGlow.setAttribute('stroke', 'rgba(59, 130, 246, 0.25)');
+        blueGlow.setAttribute('stroke', 'rgba(0, 82, 165, 0.25)');
         blueGlow.setAttribute('stroke-width', '5');
         blueGlow.setAttribute('fill', 'none');
         blueGlow.setAttribute('stroke-linejoin', 'round');
@@ -173,7 +138,7 @@ function drawConnectors() {
         // Main line
         const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         path.setAttribute('d', `M ${x1},${y1} L ${midX},${y1} L ${midX},${y4} L ${x4},${y4}`);
-        path.setAttribute('stroke', 'rgba(167, 139, 250, 0.95)');
+        path.setAttribute('stroke', 'rgba(252, 194, 27, 0.95)');
         path.setAttribute('stroke-width', '2');
         path.setAttribute('fill', 'none');
         path.setAttribute('stroke-linejoin', 'round');

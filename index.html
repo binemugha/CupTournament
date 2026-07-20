@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAY EAFC26 CUP - Route to the Final</title>
+    <title>World Cup 2026 - Cup Tournament Bracket</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,8 +14,8 @@
     </div>
 
     <header class="header">
-        <h1>MAY EAFC26 CUP</h1>
-        <div class="subtitle">Route to the Final</div>
+        <h1>FIFA World Cup 2026</h1>
+        <div class="subtitle">Cup Tournament Bracket</div>
     </header>
 
     <div class="bracket-wrapper">
@@ -43,75 +43,23 @@
                 </defs>
             </svg>
 
-            <!-- LEFT SIDE -->
-
-            <!-- Wildcard -->
-            <div class="round-column">
-                <div class="round-label">Wildcard Play-In</div>
-                <div class="spacer-md"></div>
-                <div class="match-card">
-                    <div class="match-box" data-match="W1" onclick="selectWinner(this, 'W1')">
-                        <span class="match-code">W1</span>
-                        <div class="player"><span class="player-name">RHEMA</span></div>
-                        <div class="player"><span class="player-name">Dr Leo</span></div>
-                    </div>
-                </div>
-                <div class="spacer-flex"></div>
-            </div>
-
-            <!-- Round of 16 Left -->
-            <div class="round-column">
-                <div class="round-label">Round of 16</div>
-                <div class="spacer-sm"></div>
-                <div class="match-card">
-                    <div class="match-box" data-match="R16-1" onclick="selectWinner(this, 'R16-1')">
-                        <span class="match-code">R16-1</span>
-                        <div class="player"><span class="player-name">dudieblacka</span></div>
-                        <div class="player"><span class="player-name placeholder">Dr Leo</span></div>
-                    </div>
-                </div>
-                <div class="match-card">
-                    <div class="match-box" data-match="R16-2" onclick="selectWinner(this, 'R16-2')">
-                        <span class="match-code">R16-2</span>
-                        <div class="player"><span class="player-name">lastgarribender</span></div>
-                        <div class="player"><span class="player-name">Temi</span></div>
-                    </div>
-                </div>
-                <div class="spacer-md"></div>
-                <div class="match-card">
-                    <div class="match-box" data-match="R16-3" onclick="selectWinner(this, 'R16-3')">
-                        <span class="match-code">R16-3</span>
-                        <div class="player"><span class="player-name">jon-naythan</span></div>
-                        <div class="player"><span class="player-name">mush1805</span></div>
-                    </div>
-                </div>
-                <div class="match-card">
-                    <div class="match-box" data-match="R16-4" onclick="selectWinner(this, 'R16-4')">
-                        <span class="match-code">R16-4</span>
-                        <div class="player"><span class="player-name">doublepam</span></div>
-                        <div class="player"><span class="player-name">Aramide</span></div>
-                    </div>
-                </div>
-                <div class="spacer-flex"></div>
-            </div>
-
             <!-- Quarter Finals Left -->
             <div class="round-column">
                 <div class="round-label">Quarter Finals</div>
-                <div class="spacer-lg"></div>
+                <div class="spacer-sm"></div>
                 <div class="match-card">
                     <div class="match-box" data-match="QF1" onclick="selectWinner(this, 'QF1')">
                         <span class="match-code">QF1</span>
-                        <div class="player"><span class="player-name">Temi</span></div>
+                        <div class="player"><span class="player-name">Tomide</span></div>
                         <div class="player"><span class="player-name">Dudieblacka</span></div>
                     </div>
                 </div>
-                <div class="spacer-xl"></div>
+                <div class="spacer-md"></div>
                 <div class="match-card">
                     <div class="match-box" data-match="QF2" onclick="selectWinner(this, 'QF2')">
                         <span class="match-code">QF2</span>
-                        <div class="player"><span class="player-name">Jon-naythan</span></div>
-                        <div class="player"><span class="player-name">Aramide</span></div>
+                        <div class="player"><span class="player-name">Chester_Milli</span></div>
+                        <div class="player"><span class="player-name">LastGariBender</span></div>
                     </div>
                 </div>
                 <div class="spacer-flex"></div>
@@ -119,12 +67,13 @@
 
             <!-- Semi Final Left -->
             <div class="round-column">
-                <div class="spacer-xl"></div>
+                <div class="round-label">Semi Finals</div>
+                <div class="spacer-lg"></div>
                 <div class="match-card">
                     <div class="match-box" data-match="SF1" onclick="selectWinner(this, 'SF1')">
                         <span class="match-code">SF1</span>
-                        <div class="player"><span class="player-name">Temi</span></div>
-                        <div class="player"><span class="player-name placeholder">Aramide</span></div>
+                        <div class="player"><span class="player-name placeholder">Winner QF1</span></div>
+                        <div class="player"><span class="player-name placeholder">Winner QF2</span></div>
                     </div>
                 </div>
                 <div class="spacer-flex"></div>
@@ -133,12 +82,12 @@
             <!-- FINAL -->
             <div class="round-column final-col">
                 <div class="round-label">Final</div>
-                <div class="spacer-xl"></div>
+                <div class="spacer-lg"></div>
                 <div class="match-card">
                     <div class="match-box final-box" data-match="FINAL" onclick="selectWinner(this, 'FINAL')">
                         <span class="match-code">FINAL</span>
                         <div class="player"><span class="player-name placeholder">Winner SF1</span></div>
-                        <div class="player"><span class="player-name placeholder">badman_kov</span></div>
+                        <div class="player"><span class="player-name placeholder">Winner SF2</span></div>
                         <div class="champion-crown" id="championCrown">
                             <svg viewBox="0 0 24 24"><path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/></svg>
                             <div style="font-family: Orbitron; font-size: 0.7rem; color: #fbbf24; margin-top: 4px;">CHAMPION</div>
@@ -151,12 +100,12 @@
             <!-- Semi Final Right -->
             <div class="round-column">
                 <div class="round-label">Semi Finals</div>
-                <div class="spacer-xl"></div>
+                <div class="spacer-lg"></div>
                 <div class="match-card">
                     <div class="match-box" data-match="SF2" onclick="selectWinner(this, 'SF2')">
                         <span class="match-code">SF2</span>
-                        <div class="player"><span class="player-name placeholder">badman_kov</span></div>
-                        <div class="player"><span class="player-name">Bennyblasco</span></div>
+                        <div class="player"><span class="player-name placeholder">Winner QF3</span></div>
+                        <div class="player"><span class="player-name placeholder">Winner QF4</span></div>
                     </div>
                 </div>
                 <div class="spacer-flex"></div>
@@ -165,56 +114,20 @@
             <!-- Quarter Finals Right -->
             <div class="round-column">
                 <div class="round-label">Quarter Finals</div>
-                <div class="spacer-lg"></div>
+                <div class="spacer-sm"></div>
                 <div class="match-card">
                     <div class="match-box" data-match="QF3" onclick="selectWinner(this, 'QF3')">
                         <span class="match-code">QF3</span>
-                        <div class="player"><span class="player-name">Zamar</span></div>
-                        <div class="player"><span class="player-name">badman_kov</span></div>
-                    </div>
-                </div>
-                <div class="spacer-xl"></div>
-                <div class="match-card">
-                    <div class="match-box" data-match="QF4" onclick="selectWinner(this, 'QF4')">
-                        <span class="match-code">QF4</span>
-                        <div class="player"><span class="player-name">Bennyblasco</span></div>
-                        <div class="player"><span class="player-name">Tomide</span></div>
-                    </div>
-                </div>
-                <div class="spacer-flex"></div>
-            </div>
-
-            <!-- Round of 16 Right -->
-            <div class="round-column">
-                <div class="round-label">Round of 16</div>
-                <div class="spacer-sm"></div>
-                <div class="match-card">
-                    <div class="match-box" data-match="R16-5" onclick="selectWinner(this, 'R16-5')">
-                        <span class="match-code">R16-5</span>
-                        <div class="player"><span class="player-name">Richard</span></div>
-                        <div class="player"><span class="player-name">zamar</span></div>
-                    </div>
-                </div>
-                <div class="match-card">
-                    <div class="match-box" data-match="R16-6" onclick="selectWinner(this, 'R16-6')">
-                        <span class="match-code">R16-6</span>
-                        <div class="player"><span class="player-name">Oluwarimtan</span></div>
-                        <div class="player"><span class="player-name">badman_kov</span></div>
+                        <div class="player"><span class="player-name">Ay Boda_deji</span></div>
+                        <div class="player"><span class="player-name">DrLeo</span></div>
                     </div>
                 </div>
                 <div class="spacer-md"></div>
                 <div class="match-card">
-                    <div class="match-box" data-match="R16-7" onclick="selectWinner(this, 'R16-7')">
-                        <span class="match-code">R16-7</span>
-                        <div class="player"><span class="player-name">Tomide</span></div>
-                        <div class="player"><span class="player-name">lekoja_brown</span></div>
-                    </div>
-                </div>
-                <div class="match-card">
-                    <div class="match-box" data-match="R16-8" onclick="selectWinner(this, 'R16-8')">
-                        <span class="match-code">R16-8</span>
-                        <div class="player"><span class="player-name">Bennyblasco</span></div>
-                        <div class="player"><span class="player-name">bizubeans41</span></div>
+                    <div class="match-box" data-match="QF4" onclick="selectWinner(this, 'QF4')">
+                        <span class="match-code">QF4</span>
+                        <div class="player"><span class="player-name">Badman_kov</span></div>
+                        <div class="player"><span class="player-name">Aramide</span></div>
                     </div>
                 </div>
                 <div class="spacer-flex"></div>
@@ -222,6 +135,28 @@
 
         </div>
     </div>
+
+    <section class="schedule-section">
+        <h2 class="schedule-title">Match Schedule</h2>
+        <div class="schedule-grid">
+            <div class="schedule-day">
+                <div class="schedule-date">Quarter Finals • July 20–26</div>
+                <div class="schedule-match">July 20 — QF1: Tomide vs Dudieblacka</div>
+                <div class="schedule-match">July 22 — QF2: Chester_Milli vs LastGariBender</div>
+                <div class="schedule-match">July 24 — QF3: Ay Boda_deji vs DrLeo</div>
+                <div class="schedule-match">July 26 — QF4: Badman_kov vs Aramide</div>
+            </div>
+            <div class="schedule-day">
+                <div class="schedule-date">Semi Finals • July 27–29</div>
+                <div class="schedule-match">July 27 — SF1: Winner QF1 vs Winner QF2</div>
+                <div class="schedule-match">July 29 — SF2: Winner QF3 vs Winner QF4</div>
+            </div>
+            <div class="schedule-day final-day">
+                <div class="schedule-date">Finals • July 30–31</div>
+                <div class="schedule-match">July 31 — Final: Winner SF1 vs Winner SF2</div>
+            </div>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
